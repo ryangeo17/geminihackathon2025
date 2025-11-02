@@ -133,164 +133,109 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    /* Sparkle effects - radial gradients with cross patterns */ radial-gradient(
-      circle at 20% 30%,
+  background-image:
+    /* Sparkle effects - radial gradients with cross patterns */
+    radial-gradient(circle at 20% 30%,
       rgba(255, 255, 255, 0.9) 0px,
       rgba(255, 255, 255, 0.9) 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 60% 70%,
+      transparent 3px),
+    radial-gradient(circle at 60% 70%,
       rgba(255, 255, 255, 0.8) 0px,
       rgba(255, 255, 255, 0.8) 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 90% 40%,
+      transparent 3px),
+    radial-gradient(circle at 90% 40%,
       rgba(255, 255, 255, 1) 0px,
       rgba(255, 255, 255, 1) 3px,
-      transparent 4px
-    ),
-    radial-gradient(
-      circle at 10% 80%,
+      transparent 4px),
+    radial-gradient(circle at 10% 80%,
       rgba(255, 255, 255, 0.7) 0px,
       rgba(255, 255, 255, 0.7) 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 75% 25%,
+      transparent 3px),
+    radial-gradient(circle at 75% 25%,
       rgba(255, 255, 255, 0.8) 0px,
       rgba(255, 255, 255, 0.8) 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 45% 75%,
+      transparent 3px),
+    radial-gradient(circle at 45% 75%,
       rgba(255, 255, 255, 0.9) 0px,
       rgba(255, 255, 255, 0.9) 3px,
-      transparent 4px
-    ),
-    radial-gradient(
-      circle at 85% 60%,
+      transparent 4px),
+    radial-gradient(circle at 85% 60%,
       rgba(255, 255, 255, 0.7) 0px,
       rgba(255, 255, 255, 0.7) 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 35% 90%,
+      transparent 3px),
+    radial-gradient(circle at 35% 90%,
       rgba(255, 255, 255, 0.8) 0px,
       rgba(255, 255, 255, 0.8) 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 95% 15%,
+      transparent 3px),
+    radial-gradient(circle at 95% 15%,
       rgba(255, 255, 255, 1) 0px,
       rgba(255, 255, 255, 1) 3px,
-      transparent 4px
-    ),
-    radial-gradient(
-      circle at 65% 35%,
+      transparent 4px),
+    radial-gradient(circle at 65% 35%,
       rgba(255, 255, 255, 0.8) 0px,
       rgba(255, 255, 255, 0.8) 2px,
-      transparent 3px
-    ),
+      transparent 3px),
     /* Cross patterns for sparkle effect */
-      linear-gradient(
-        0deg,
-        transparent 48%,
-        rgba(255, 255, 255, 0.7) 49%,
-        rgba(255, 255, 255, 0.7) 51%,
-        transparent 52%
-      )
-      20% 30% / 20px 20px,
-    linear-gradient(
-        90deg,
-        transparent 48%,
-        rgba(255, 255, 255, 0.7) 49%,
-        rgba(255, 255, 255, 0.7) 51%,
-        transparent 52%
-      )
-      20% 30% / 20px 20px,
-    linear-gradient(
-        45deg,
-        transparent 47%,
-        rgba(255, 255, 255, 0.6) 49%,
-        rgba(255, 255, 255, 0.6) 51%,
-        transparent 53%
-      )
-      20% 30% / 20px 20px,
-    linear-gradient(
-        -45deg,
-        transparent 47%,
-        rgba(255, 255, 255, 0.6) 49%,
-        rgba(255, 255, 255, 0.6) 51%,
-        transparent 53%
-      )
-      20% 30% / 20px 20px,
-    linear-gradient(
-        0deg,
-        transparent 48%,
-        rgba(255, 255, 255, 0.7) 49%,
-        rgba(255, 255, 255, 0.7) 51%,
-        transparent 52%
-      )
-      90% 40% / 25px 25px,
-    linear-gradient(
-        90deg,
-        transparent 48%,
-        rgba(255, 255, 255, 0.7) 49%,
-        rgba(255, 255, 255, 0.7) 51%,
-        transparent 52%
-      )
-      90% 40% / 25px 25px,
-    linear-gradient(
-        45deg,
-        transparent 47%,
-        rgba(255, 255, 255, 0.6) 49%,
-        rgba(255, 255, 255, 0.6) 51%,
-        transparent 53%
-      )
-      90% 40% / 25px 25px,
-    linear-gradient(
-        -45deg,
-        transparent 47%,
-        rgba(255, 255, 255, 0.6) 49%,
-        rgba(255, 255, 255, 0.6) 51%,
-        transparent 53%
-      )
-      90% 40% / 25px 25px,
-    linear-gradient(
-        0deg,
-        transparent 48%,
-        rgba(255, 255, 255, 0.6) 49%,
-        rgba(255, 255, 255, 0.6) 51%,
-        transparent 52%
-      )
-      95% 15% / 25px 25px,
-    linear-gradient(
-        90deg,
-        transparent 48%,
-        rgba(255, 255, 255, 0.6) 49%,
-        rgba(255, 255, 255, 0.6) 51%,
-        transparent 52%
-      )
-      95% 15% / 25px 25px,
-    linear-gradient(
-        45deg,
-        transparent 47%,
-        rgba(255, 255, 255, 0.5) 49%,
-        rgba(255, 255, 255, 0.5) 51%,
-        transparent 53%
-      )
-      95% 15% / 25px 25px,
-    linear-gradient(
-        -45deg,
-        transparent 47%,
-        rgba(255, 255, 255, 0.5) 49%,
-        rgba(255, 255, 255, 0.5) 51%,
-        transparent 53%
-      )
-      95% 15% / 25px 25px;
+    linear-gradient(0deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.7) 49%,
+      rgba(255, 255, 255, 0.7) 51%,
+      transparent 52%) 20% 30% / 20px 20px,
+    linear-gradient(90deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.7) 49%,
+      rgba(255, 255, 255, 0.7) 51%,
+      transparent 52%) 20% 30% / 20px 20px,
+    linear-gradient(45deg,
+      transparent 47%,
+      rgba(255, 255, 255, 0.6) 49%,
+      rgba(255, 255, 255, 0.6) 51%,
+      transparent 53%) 20% 30% / 20px 20px,
+    linear-gradient(-45deg,
+      transparent 47%,
+      rgba(255, 255, 255, 0.6) 49%,
+      rgba(255, 255, 255, 0.6) 51%,
+      transparent 53%) 20% 30% / 20px 20px,
+    linear-gradient(0deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.7) 49%,
+      rgba(255, 255, 255, 0.7) 51%,
+      transparent 52%) 90% 40% / 25px 25px,
+    linear-gradient(90deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.7) 49%,
+      rgba(255, 255, 255, 0.7) 51%,
+      transparent 52%) 90% 40% / 25px 25px,
+    linear-gradient(45deg,
+      transparent 47%,
+      rgba(255, 255, 255, 0.6) 49%,
+      rgba(255, 255, 255, 0.6) 51%,
+      transparent 53%) 90% 40% / 25px 25px,
+    linear-gradient(-45deg,
+      transparent 47%,
+      rgba(255, 255, 255, 0.6) 49%,
+      rgba(255, 255, 255, 0.6) 51%,
+      transparent 53%) 90% 40% / 25px 25px,
+    linear-gradient(0deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.6) 49%,
+      rgba(255, 255, 255, 0.6) 51%,
+      transparent 52%) 95% 15% / 25px 25px,
+    linear-gradient(90deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.6) 49%,
+      rgba(255, 255, 255, 0.6) 51%,
+      transparent 52%) 95% 15% / 25px 25px,
+    linear-gradient(45deg,
+      transparent 47%,
+      rgba(255, 255, 255, 0.5) 49%,
+      rgba(255, 255, 255, 0.5) 51%,
+      transparent 53%) 95% 15% / 25px 25px,
+    linear-gradient(-45deg,
+      transparent 47%,
+      rgba(255, 255, 255, 0.5) 49%,
+      rgba(255, 255, 255, 0.5) 51%,
+      transparent 53%) 95% 15% / 25px 25px;
   background-repeat: no-repeat;
   opacity: 0.8;
   animation: sparkle 4s ease-in-out infinite;
@@ -298,20 +243,24 @@
 }
 
 @keyframes twinkle {
+
   0%,
   100% {
     opacity: 0.8;
   }
+
   50% {
     opacity: 1;
   }
 }
 
 @keyframes sparkle {
+
   0%,
   100% {
     opacity: 0.6;
   }
+
   50% {
     opacity: 1;
   }
@@ -338,7 +287,8 @@
   max-width: 800px;
   margin: 3rem auto 3rem auto;
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
   border-radius: 16px;
@@ -460,7 +410,7 @@
   border-radius: 24px !important;
 }
 
-.voiceflow-chat-container > div {
+.voiceflow-chat-container>div {
   width: 100% !important;
   height: 100% !important;
   overflow: auto !important;
@@ -517,6 +467,7 @@
   gap: 24px;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .stat-item::before {
@@ -532,7 +483,12 @@
   border-top-right-radius: 10px;
 }
 
-.stat-item > * {
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item>* {
   position: relative;
   z-index: 1;
 }
