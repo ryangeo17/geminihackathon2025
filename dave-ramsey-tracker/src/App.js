@@ -112,6 +112,19 @@ function App() {
     }
   };
 
+  const scrollToTop = () => {
+    // Unlock scroll when user clicks the navbar brand
+    if (scrollLocked) {
+      setScrollLocked(false);
+      document.body.style.overflow = "";
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const scrollToBabySteps = () => {
     // Unlock scroll when user clicks the button
     if (scrollLocked) {
@@ -262,7 +275,13 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-        <div className="navbar-brand">Ramsey AI</div>
+        <div
+          className="navbar-brand"
+          onClick={scrollToTop}
+          style={{ cursor: "pointer" }}
+        >
+          Ramsey AI
+        </div>
         <div className="navbar-buttons">
           <button className="navbar-button" onClick={scrollToChat}>
             Talk to Ramsey
@@ -280,9 +299,10 @@ function App() {
           <h1>Transform Your Financial Future</h1>
           <div className="hero-cta">
             <p className="hero-cta-text">
-              Ready to take control of your finances? Chat with our AI assistant
-              below to discover which Baby Step you're on and get personalized
-              guidance on your journey to financial freedom.
+              In the past 20 years, average debt per household and cost of goods
+              has <strong>more than doubled</strong>, while salaries have
+              remained <strong>stagnant</strong>. <br></br> <br></br>
+              Learn how to beat the odds today with Ramsey AI.
             </p>
             <button className="cta-button" onClick={scrollToChat}>
               Speak to Ramsey AI
