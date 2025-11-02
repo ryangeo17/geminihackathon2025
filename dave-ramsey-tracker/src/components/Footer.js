@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; 2024 Baby Steps Tracker. Built for financial empowerment. Not affiliated with Dave Ramsey.</p>
+        <p>2025 Baby Steps Tracker. Built for financial empowerment. Not affiliated with Dave Ramsey.</p>
       </div>
     </footer>
   );
