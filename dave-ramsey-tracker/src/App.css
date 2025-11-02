@@ -31,13 +31,13 @@
 }
 
 .hero-header {
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
   overflow: hidden;
@@ -72,15 +72,36 @@
 .hero-content p {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 3rem 0;
+  margin: 0 0 2rem 0;
   line-height: 1.6;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta {
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta-text {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.chat-section {
+  width: 100%;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .voiceflow-chat-container {
   width: 80vw;
   max-width: 1400px;
-  margin: 3rem auto 0;
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.98);
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -231,11 +252,23 @@
     margin-bottom: 2rem;
   }
 
+  .hero-cta {
+    margin-top: 1.5rem;
+  }
+
+  .hero-cta-text {
+    font-size: 1rem;
+  }
+
+  .chat-section {
+    padding: 1.5rem 0;
+  }
+
   .voiceflow-chat-container {
     width: 85%;
     padding: 1.5rem;
     height: 500px;
-    margin: 2rem auto 0;
+    margin: 0 auto;
   }
 
   .steps-showcase {
@@ -274,11 +307,23 @@
     font-size: 1rem;
   }
 
+  .hero-cta {
+    margin-top: 1rem;
+  }
+
+  .hero-cta-text {
+    font-size: 0.9rem;
+  }
+
+  .chat-section {
+    padding: 1rem 0;
+  }
+
   .voiceflow-chat-container {
     width: 90%;
     padding: 1rem;
     height: 400px;
-    margin: 1.5rem auto 0;
+    margin: 0 auto;
   }
 
   .steps-container h2 {

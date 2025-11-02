@@ -61,6 +61,16 @@ const BABY_STEPS = [
 ];
 
 function App() {
+  // Scroll to top on page load/reload
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    // Prevent browser from restoring scroll position
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
   useEffect(() => {
     // Load Voiceflow script
     const script = document.createElement("script");
@@ -103,12 +113,20 @@ function App() {
             Follow Dave Ramsey's proven 7 Baby Steps to achieve financial peace
             and build lasting wealth
           </p>
+          <div className="hero-cta">
+            <p className="hero-cta-text">
+              Ready to take control of your finances? Chat with our AI assistant below to discover which Baby Step you're on and get personalized guidance on your journey to financial freedom.
+            </p>
+          </div>
         </div>
+      </header>
+
+      <section className="chat-section">
         <div
           id="voiceflow-chat-container"
           className="voiceflow-chat-container"
         ></div>
-      </header>
+      </section>
 
       <main className="steps-showcase">
         <div className="steps-container">
