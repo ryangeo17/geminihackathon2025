@@ -31,13 +31,13 @@
 }
 
 .hero-header {
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 6rem 2rem 3rem 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
   overflow: hidden;
@@ -58,6 +58,7 @@
   position: relative;
   z-index: 1;
   max-width: 800px;
+  margin-top: 2rem;
 }
 
 .hero-content h1 {
@@ -82,6 +83,10 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .hero-cta-text {
@@ -92,21 +97,47 @@
   font-weight: 500;
 }
 
+.cta-button {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  background: #f5f5f5;
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+}
+
 .chat-section {
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  flex-direction: column;
 }
 
 .voiceflow-chat-container {
-  width: 80vw;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  height: 600px;
   background: rgba(255, 255, 255, 0.98);
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   padding: 2rem;
-  height: 600px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -239,8 +270,13 @@
   }
 
   .hero-header {
-    min-height: 50vh;
-    padding: 1rem;
+    min-height: 100vh;
+    padding: 5rem 1rem 2rem 1rem;
+    justify-content: flex-start;
+  }
+
+  .hero-content {
+    margin-top: 1rem;
   }
 
   .hero-content h1 {
@@ -254,21 +290,26 @@
 
   .hero-cta {
     margin-top: 1.5rem;
+    gap: 1.5rem;
   }
 
   .hero-cta-text {
     font-size: 1rem;
   }
 
+  .cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
   .chat-section {
-    padding: 1.5rem 0;
+    padding: 1.5rem;
   }
 
   .voiceflow-chat-container {
-    width: 85%;
+    width: 100%;
     padding: 1.5rem;
-    height: 500px;
-    margin: 0 auto;
+    min-height: 500px;
   }
 
   .steps-showcase {
@@ -299,6 +340,16 @@
     letter-spacing: 1px;
   }
 
+  .hero-header {
+    min-height: 100vh;
+    padding: 4rem 1rem 1.5rem 1rem;
+    justify-content: flex-start;
+  }
+
+  .hero-content {
+    margin-top: 0.5rem;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -309,21 +360,26 @@
 
   .hero-cta {
     margin-top: 1rem;
+    gap: 1.5rem;
   }
 
   .hero-cta-text {
     font-size: 0.9rem;
   }
 
+  .cta-button {
+    padding: 0.9rem 2rem;
+    font-size: 0.9rem;
+  }
+
   .chat-section {
-    padding: 1rem 0;
+    padding: 1rem;
   }
 
   .voiceflow-chat-container {
-    width: 90%;
+    width: 100%;
     padding: 1rem;
-    height: 400px;
-    margin: 0 auto;
+    min-height: 400px;
   }
 
   .steps-container h2 {

@@ -61,15 +61,23 @@ const BABY_STEPS = [
 ];
 
 function App() {
-  // Scroll to top on page load/reload
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    
-    // Prevent browser from restoring scroll position
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+  const scrollToChat = () => {
+    const chatSection = document.querySelector(".chat-section");
+    const navbar = document.querySelector(".navbar");
+    if (chatSection && navbar) {
+      const navbarHeight = navbar.offsetHeight;
+      const chatSectionTop =
+        chatSection.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = chatSectionTop - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    } else if (chatSection) {
+      chatSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, []);
+  };
 
   useEffect(() => {
     // Load Voiceflow script
@@ -115,8 +123,13 @@ function App() {
           </p>
           <div className="hero-cta">
             <p className="hero-cta-text">
-              Ready to take control of your finances? Chat with our AI assistant below to discover which Baby Step you're on and get personalized guidance on your journey to financial freedom.
+              Ready to take control of your finances? Chat with our AI assistant
+              below to discover which Baby Step you're on and get personalized
+              guidance on your journey to financial freedom.
             </p>
+            <button className="cta-button" onClick={scrollToChat}>
+              Speak to Ramsey AI
+            </button>
           </div>
         </div>
       </header>
