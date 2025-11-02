@@ -9,22 +9,23 @@ A modern, AI-ready React application that helps users follow Dave Ramsey's seven
 - Modern, colorful card-based design
 - Engaging hero section with clear call-to-action
 
-### 🤖 AI-Ready Chatbot Interface
-- Large modal chatbot window ready for AI integration
-- Placeholder interface showing upcoming AI features
-- Foundation built for comprehensive financial assistance
+### 🤖 Integrated AI Chatbot
+- Voiceflow-powered intelligent financial assistant
+- Floating chat widget for seamless interaction
+- Personalized guidance through Dave Ramsey's Baby Steps
+- 24/7 AI-powered financial coaching
 
 ### 🎨 Modern Design
 - Gradient backgrounds and smooth animations
 - Responsive design for all devices
 - Professional, encouraging user experience
 
-### 🚀 Future AI Capabilities (Coming Soon)
+### 🚀 AI Capabilities
 - **Personalized Financial Diagnosis**: AI assessment of your financial situation
 - **Smart Goal Setting**: Customized targets based on your income and expenses
 - **Real-time Progress Monitoring**: Intelligent tracking and recommendations
 - **Expert Financial Guidance**: 24/7 AI-powered advice and tips
-- **Automated Insights**: Proactive suggestions for financial improvement
+- **Interactive Conversations**: Natural language financial coaching
 
 ## The Seven Baby Steps
 
@@ -67,9 +68,9 @@ npm run build
 ## Usage
 
 1. **View the 7 Steps**: Browse the beautifully displayed baby steps on the main page
-2. **Start Your Journey**: Click "Start Saving Today" to open the chatbot interface
-3. **AI Integration Coming**: The chatbot is ready for AI integration to provide personalized guidance
-4. **Future Features**: Once AI is integrated, users will receive personalized financial coaching
+2. **Start Your Journey**: Click "Start Saving Today" to open the AI chatbot
+3. **Chat with AI**: Get personalized financial guidance through the Voiceflow assistant
+4. **Follow Recommendations**: Receive step-by-step coaching tailored to your situation
 
 ## Technology Stack
 
@@ -78,23 +79,22 @@ npm run build
 - **localStorage** - Client-side data persistence
 - **Responsive Design** - Mobile-friendly interface
 
-## Next Steps for AI Integration
+## Voiceflow Integration
 
-The app is now ready for AI integration. To add chatbot functionality:
+The app now includes a fully integrated Voiceflow AI chatbot:
 
-1. **Choose an AI Service**: OpenAI GPT, Claude, or similar
-2. **Backend Integration**: Add API endpoints for chat functionality
-3. **Chat Interface**: Replace the placeholder with real chat components
-4. **Financial Logic**: Implement step-by-step guidance algorithms
-5. **Data Persistence**: Add user progress tracking and storage
+- ✅ Voiceflow widget automatically loads on page load
+- ✅ "Start Saving Today" button opens the chat interface
+- ✅ Floating chat widget for easy access
+- ✅ Seamless integration with existing design
+- ✅ Production-ready AI financial assistant
 
-## Architecture Ready for AI
+## Technical Implementation
 
-- ✅ Chatbot modal component structure
-- ✅ Modern React foundation
-- ✅ Responsive design system
-- ✅ Component-based architecture
-- ✅ Clean separation of concerns
+- **Voiceflow Script**: Dynamically loaded via useEffect hook
+- **Project ID**: 690791309c414573ccd3a699
+- **Runtime**: General runtime with voice capabilities
+- **Version**: Production version for stable experience
 
 ## Contributing
 
