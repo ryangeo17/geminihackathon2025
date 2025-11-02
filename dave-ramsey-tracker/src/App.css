@@ -353,8 +353,7 @@
 }
 
 .cta-button {
-  background: white;
-  color: #667eea;
+  position: relative;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1rem;
@@ -366,12 +365,30 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 50px;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover::before {
+  background: #f5f5f5;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  background: #f5f5f5;
 }
 
 .cta-button:active {
@@ -414,7 +431,7 @@
   border-radius: 24px !important;
 }
 
-.voiceflow-chat-container>div {
+.voiceflow-chat-container > div {
   width: 100% !important;
   height: 100% !important;
   overflow: auto !important;
@@ -488,6 +505,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .step-card::before {
@@ -516,7 +534,7 @@
   justify-content: center;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
 }
 
@@ -540,7 +558,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .step-card:nth-child(n+5) {
+  .step-card:nth-child(n + 5) {
     grid-column: span 1;
     grid-row: auto;
   }
@@ -574,7 +592,6 @@
 .steps-container h2 {
   font-size: 2.5rem;
 }
-
 
 @media (max-width: 768px) {
   .navbar {
@@ -651,7 +668,7 @@
     gap: 1.5rem;
   }
 
-  .step-card:nth-child(n+1) {
+  .step-card:nth-child(n + 1) {
     grid-column: 1;
     grid-row: auto;
     max-width: none;

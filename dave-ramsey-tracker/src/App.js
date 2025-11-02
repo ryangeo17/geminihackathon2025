@@ -219,6 +219,16 @@ function App() {
       <header className="hero-header">
         <div className="hero-content">
           <h1>Transform Your Financial Future</h1>
+          <div className="hero-cta">
+            <p className="hero-cta-text">
+              Ready to take control of your finances? Chat with our AI assistant
+              below to discover which Baby Step you're on and get personalized
+              guidance on your journey to financial freedom.
+            </p>
+            <button className="cta-button" onClick={scrollToChat}>
+              Speak to Ramsey AI
+            </button>
+          </div>
           <div className="hero-video">
             <iframe
               width="560"
@@ -230,20 +240,6 @@ function App() {
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
-          </div>
-          <p>
-            Follow Dave Ramsey's proven 7 Baby Steps to achieve financial peace
-            and build lasting wealth
-          </p>
-          <div className="hero-cta">
-            <p className="hero-cta-text">
-              Ready to take control of your finances? Chat with our AI assistant
-              below to discover which Baby Step you're on and get personalized
-              guidance on your journey to financial freedom.
-            </p>
-            <button className="cta-button" onClick={scrollToChat}>
-              Speak to Ramsey AI
-            </button>
           </div>
         </div>
       </header>
