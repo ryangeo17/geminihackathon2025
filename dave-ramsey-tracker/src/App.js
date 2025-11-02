@@ -73,6 +73,10 @@ function App() {
         voice: {
           url: "https://runtime-api.voiceflow.com",
         },
+        render: {
+          mode: "embedded",
+          target: document.getElementById("voiceflow-chat-container"),
+        },
       });
     };
     script.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
@@ -81,16 +85,11 @@ function App() {
 
     // Cleanup function to remove script when component unmounts
     return () => {
-      document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
-
-  const openChatbot = () => {
-    // Open Voiceflow chat widget
-    if (window.voiceflow && window.voiceflow.chat) {
-      window.voiceflow.chat.open();
-    }
-  };
 
   return (
     <div className="App">
@@ -101,9 +100,10 @@ function App() {
             Follow Dave Ramsey's proven 7 Baby Steps to achieve financial peace
             and build lasting wealth
           </p>
-          <button className="cta-button" onClick={openChatbot}>
-            Start Saving Today
-          </button>
+          <div
+            id="voiceflow-chat-container"
+            className="voiceflow-chat-container"
+          ></div>
         </div>
       </header>
 
