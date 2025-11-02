@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./App.css";
 import Footer from "./components/Footer";
 
@@ -61,7 +61,16 @@ const BABY_STEPS = [
 ];
 
 function App() {
+  const [scrollLocked, setScrollLocked] = useState(true);
+  const scrollPositionRef = useRef(0);
+
   const scrollToChat = () => {
+    // Unlock scroll when user clicks the CTA button
+    if (scrollLocked) {
+      setScrollLocked(false);
+      document.body.style.overflow = "";
+    }
+
     const chatSection = document.querySelector(".chat-section");
     const navbar = document.querySelector(".navbar");
     if (chatSection && navbar) {
@@ -78,6 +87,99 @@ function App() {
       chatSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  // Lock scroll on mount and prevent browser scroll restoration
+  useEffect(() => {
+    // Scroll to top immediately
+    window.scrollTo(0, 0);
+
+    // Prevent browser from restoring scroll position
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    // Lock body scroll
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      // Cleanup: restore scroll when component unmounts
+      document.body.style.overflow = "";
+    };
+  }, []);
+
+  // Monitor scroll position and reset if locked
+  useEffect(() => {
+    if (!scrollLocked) return;
+
+    const handleScroll = () => {
+      if (scrollLocked) {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: false });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollLocked]);
+
+  // Unlock scroll on user interaction
+  useEffect(() => {
+    if (!scrollLocked) return;
+
+    const unlockScroll = () => {
+      setScrollLocked(false);
+      document.body.style.overflow = "";
+    };
+
+    // Detect user interaction events
+    const events = [
+      "scroll",
+      "wheel",
+      "touchmove",
+      "keydown",
+      "mousedown",
+      "click",
+      "touchstart",
+    ];
+
+    const handleInteraction = (e) => {
+      // Allow programmatic scrolls (like CTA button)
+      if (e.type === "click" && e.target.closest(".cta-button")) {
+        unlockScroll();
+        return;
+      }
+
+      // Check if this is actual user scrolling (not programmatic)
+      if (e.type === "scroll") {
+        const currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (Math.abs(currentScroll - scrollPositionRef.current) > 5) {
+          unlockScroll();
+        }
+        scrollPositionRef.current = currentScroll;
+      } else {
+        unlockScroll();
+      }
+    };
+
+    events.forEach((event) => {
+      window.addEventListener(event, handleInteraction, { passive: true });
+    });
+
+    // Fallback: unlock after 5 seconds
+    const timeout = setTimeout(() => {
+      unlockScroll();
+    }, 5000);
+
+    return () => {
+      events.forEach((event) => {
+        window.removeEventListener(event, handleInteraction);
+      });
+      clearTimeout(timeout);
+    };
+  }, [scrollLocked]);
 
   useEffect(() => {
     // Load Voiceflow script
