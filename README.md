@@ -2,7 +2,7 @@
 
 ## Inspiration
 
-In the past 20 years, average household debt and cost of goods have **more than doubled** while salaries remained stagnant. With 28% of Americans having less than $1,000 in savings and 34% having $0, there's a clear need for accessible financial guidance. We created an AI-powered solution to make Dave Ramsey's proven Baby Steps methodology instantly accessible to anyone seeking financial freedom.
+In the past 20 years, average household debt and cost of goods have **more than doubled** while salaries remained stagnant. With 28% of Americans having less than $1,000 in savings, there's a clear need for accessible financial guidance. We created an AI-powered solution to make Dave Ramsey's proven Baby Steps methodology instantly accessible to anyone seeking financial freedom.
 
 ## What it does
 
@@ -68,11 +68,11 @@ The build folder will contain the optimized production files ready for deploymen
 
 ## How we built it
 
-**Frontend**: Built with React 19.2.0 featuring smooth scrolling navigation, scroll-lock UX, and mobile-first responsive design.
+**Frontend**: Built with React 19.2.0 featuring smooth scrolling navigation, scroll-lock UX, and responsive design.
 
 **AI Integration**: Embedded Voiceflow conversational AI for intelligent financial coaching with contextual advice.
 
-**Key Features**: Hero section with financial crisis statistics, interactive Baby Steps showcase, educational video content, and guided user experience with accessibility considerations.
+**Key Features**: Financial crisis statistics, interactive Baby Steps showcase, educational video content, and guided user experience with accessibility considerations.
 
 ## Challenges we ran into
 
@@ -85,7 +85,6 @@ The build folder will contain the optimized production files ready for deploymen
 - Seamless AI integration providing personalized financial coaching
 - User-centric design with intuitive guided navigation
 - Comprehensive financial statistics highlighting real American challenges
-- Accessible design with semantic HTML and ARIA labels
 - Smooth performance across all device types
 
 ## What we learned
